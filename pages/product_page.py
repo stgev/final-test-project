@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 from .base_page import BasePage
 from .locators import ProductPageLocators
 
@@ -29,5 +31,5 @@ class ProductPage(BasePage):
     def _should_be_correct_product_name(self):
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME)
         confirm_message = self.browser.find_element(*ProductPageLocators.CONFIRM_MESSAGE)
-        assert confirm_message.text.startswith(product_name.text), ("Product name in confirm message doesn't match "
-                                                                    "the product added")
+        assert confirm_message.find_element(By.TAG_NAME, "strong").text == product_name.text, \
+            "Product name in confirm message doesn't match the product added"
