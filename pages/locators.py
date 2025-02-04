@@ -16,3 +16,4 @@ class ProductPageLocators:
     PRODUCT_NAME = (By.TAG_NAME, "h1")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main>p.price_color")
     CART_TOTAL = (By.CSS_SELECTOR, ".alert:last-child strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success:first-child")

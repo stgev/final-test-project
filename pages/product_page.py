@@ -33,3 +33,7 @@ class ProductPage(BasePage):
         confirm_message = self.browser.find_element(*ProductPageLocators.CONFIRM_MESSAGE)
         assert confirm_message.find_element(By.TAG_NAME, "strong").text == product_name.text, \
             "Product name in confirm message doesn't match the product added"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(
+            *ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"
