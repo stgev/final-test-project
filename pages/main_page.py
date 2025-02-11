@@ -5,4 +5,6 @@ from .locators import MainPageLocators
 
 
 class MainPage(BasePage):
-    pass
+    def go_to_cart(self):
+        go_to_cart_button = self.browser.find_element(*MainPageLocators.GO_TO_CART_BUTTON)
+        go_to_cart_button.click()

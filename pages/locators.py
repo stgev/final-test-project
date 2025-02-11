@@ -1,18 +1,24 @@
 from selenium.webdriver.common.by import By
 
 
-class BasePageLocators():
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
 
 
-class MainPageLocators:
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+class CartPageLocators:
+    CART_FORMSET = (By.ID, "basket_formset")
+    EMPTY_CART_MESSAGE = (By.CSS_SELECTOR, "#content_inner>p")
 
 
 class LoginPageLocators:
     LOGIN_FORM = (By.ID, "login_form")
     REGISTER_FORM = (By.ID, "register_form")
+
+
+class MainPageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    GO_TO_CART_BUTTON = (By.CSS_SELECTOR, ".btn-group>a.btn")
 
 
 class ProductPageLocators:
