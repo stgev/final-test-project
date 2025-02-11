@@ -54,6 +54,10 @@ class BasePage:
         except NoAlertPresentException:
             print("No second alert presented")
 
+    def go_to_cart(self):
+        go_to_cart_button = self.browser.find_element(*BasePageLocators.GO_TO_CART_BUTTON)
+        go_to_cart_button.click()
+
     def go_to_login_page(self):
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
