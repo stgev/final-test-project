@@ -9,7 +9,7 @@ class ProductPage(BasePage):
         self.should_be_add_to_cart_button()
         add_to_cart_button = self.browser.find_element(*ProductPageLocators.ADD_TO_CART_BUTTON)
         add_to_cart_button.click()
-        # self.solve_quiz_and_get_code()
+        self.solve_quiz_and_get_code()
 
     def should_be_correct_confirm_message(self):
         self._should_be_confirm_message()

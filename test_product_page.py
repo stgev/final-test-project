@@ -7,7 +7,6 @@ from pages.product_page import ProductPage
 from pages.locators import ProductPageLocators
 
 
-@pytest.mark.user
 class TestUserAddToBasketFromProductPage:
     @pytest.fixture(scope="function", autouse=True)
     def setup(self, browser):
@@ -25,7 +24,7 @@ class TestUserAddToBasketFromProductPage:
         page.is_not_element_present(ProductPageLocators.SUCCESS_MESSAGE)
 
     def test_user_can_add_product_to_basket(self, browser):
-        link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+        link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0"
         page = ProductPage(browser, link)
         page.open()
         page.add_product_to_cart()
