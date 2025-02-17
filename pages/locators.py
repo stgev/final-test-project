@@ -8,9 +8,9 @@ class BasePageLocators:
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
-class CartPageLocators:
-    CART_FORMSET = (By.ID, "basket_formset")
-    EMPTY_CART_MESSAGE = (By.CSS_SELECTOR, "#content_inner>p")
+class BasketPageLocators:
+    BASKET_FORMSET = (By.ID, "basket_formset")
+    EMPTY_BASKET_MESSAGE = (By.CSS_SELECTOR, "#content_inner>p")
 
 
 class LoginPageLocators:
